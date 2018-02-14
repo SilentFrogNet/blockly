@@ -31,7 +31,7 @@ goog.require('Blockly.Dorker');
 
 Blockly.Dorker['text'] = function(block) {
   // Text value.
-  var code = Blockly.Dorker.quote_(block.getFieldValue('TEXT'));
+  var code = "\"" + (block.getFieldValue('TEXT') || "") + "\"";
   return [code, Blockly.Dorker.ORDER_ATOMIC];
 };
 
